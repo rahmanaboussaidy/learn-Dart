@@ -23,3 +23,13 @@ void main() {
     "My name is $name, i am $age years old, $height tall and Student status : $isStudent",
   );
 }
+
+//Arithmetic operators
+String operator = "+ - / * %";
+
+// comparison operators
+String compOperators = "== , != , >, <,";
+
+// logical operator
+String logicaloperator = "&&,||,!";
+
