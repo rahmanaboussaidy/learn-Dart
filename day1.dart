@@ -13,7 +13,7 @@ void main() {
 }
 
 //data types
-void main() {
+void person() {
   String name = "Rahman Abubakari";
   int age = 32;
   double height = 1.78;
