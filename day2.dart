@@ -8,32 +8,33 @@
 
 // Otherwise → print "Adult"
 
-
-void main (){
+void main() {
   var age;
   age = 12;
-  
-  if(age < 13){
+
+  if (age < 13) {
     print("Child");
-  }
-  else if(age >= 13 && age <= 19){
+  } else if (age >= 13 && age <= 19) {
     print("Teenager");
-  }
-  
-  else {
-    print ("Adult");
+  } else {
+    print("Adult");
   }
 
+  num();
+  hello();
+  sarr();
+}
 
-  
-// for loop
+void num() {
+  // for loop
   int i = 1;
-  for(int i = 1; i <= 10; i++ ){
+  for (int i = 1; i <= 10; i++) {
     print("Number: $i");
   }
+}
 
+void hello() {
   // while loop
-  
 
   int i = 1;
   int sum = 0;
@@ -44,18 +45,14 @@ void main (){
   }
 
   print("Sum of numbers from 1 to 5 is: $sum");
-
-
-
-// do-while loop
-  int i = 5;
-  
-  do{
-    print ("Number: $i");
-    i--;
-  }
-   while(i >= 1);
-
 }
 
+void sarr() {
+  // do-while loop
+  int i = 5;
 
+  do {
+    print("Number: $i");
+    i--;
+  } while (i >= 1);
+}
