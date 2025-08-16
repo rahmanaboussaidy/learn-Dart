@@ -1,63 +1,55 @@
 // Abstract class Shape
 abstract class Shape {
-    double area();
+  double area(); // abstract method
 }
 
-
+// Circle subclass
 class Circle extends Shape {
-    late double radius;
+  double radius;
 
-    Circle(double radius) {
-        this.radius = radius;
-    }
+  Circle(this.radius);
 
-    @Override
-    double area() {
-        return Math.PI * radius * radius;
-    }
+  @override
+  double area() {
+    return 3.14159 * radius * radius;
+  }
 }
 
 // Rectangle subclass
 class Rectangle extends Shape {
-    late double length, width;
+  double length, width;
 
-    Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
-    }
+  Rectangle(this.length, this.width);
 
-    @Override
-    double area() {
-        return length * width;
-    }
+  @override
+  double area() {
+    return length * width;
+  }
 }
 
-// Interface Drivable
-interface Drivable {
-    void drive();
+// Interface in Dart is created using abstract class or just a class with unimplemented methods
+abstract class Drivable {
+  void drive();
 }
 
 // Car class implementing Drivable
 class Car implements Drivable {
-    @Override
-    public void drive() {
-        System.out.println("The car is driving...");
-    }
+  @override
+  void drive() {
+    print("The car is driving...");
+  }
 }
 
-// Main class to test
-public class Main {
-    public static void main(String[] args) {
-        // Test Circle
-        Shape circle = new Circle(5);
-        System.out.println("Area of Circle: " + circle.area());
+void main() {
+  // Test Circle
+  Shape circle = Circle(5);
+  print("Area of Circle: ${circle.area()}");
 
-        // Test Rectangle
-        Shape rectangle = new Rectangle(4, 6);
-        System.out.println("Area of Rectangle: " + rectangle.area());
+  // Test Rectangle
+  Shape rectangle = Rectangle(4, 6);
+  print("Area of Rectangle: ${rectangle.area()}");
 
-        // Test Car
-        Drivable car = new Car();
-        car.drive();
-    }
+  // Test Car
+  Drivable car = Car();
+  car.drive();
 }
