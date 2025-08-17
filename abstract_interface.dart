@@ -40,6 +40,12 @@ class Car implements Drivable {
   }
 }
 
+class Van implements Drivable {
+  @override
+  void drive() {
+    print("The truck is driving...");
+  }
+}
 void main() {
   // Test Circle
   Shape circle = Circle(5);
@@ -52,4 +58,8 @@ void main() {
   // Test Car
   Drivable car = Car();
   car.drive();
+  
+ // Test Van
+  Drivable van = Van();
+  van.drive();
 }
