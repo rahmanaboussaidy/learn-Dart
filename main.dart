@@ -1,6 +1,5 @@
-import 'package:myapp/db_client.dart';
-import 'package:myapp/myapp.dart' as myapp;
-import 'package:myapp/user.dart';
+import 'deserialization.dart';
+
 
 void main() {
     var a = DatabaseClient.instance;
@@ -11,4 +10,13 @@ void main() {
   });
 
   // print(dob.dobGetter);
+
+
+    Map<String, dynamic> musa = {"id": "user123", "name": "Musa"};
+
+  final user = User("1", "mussa");
+  print(user);
+
+  final user3 = User.fromJson(musa); // deserialization
+  print(user3);
 }
