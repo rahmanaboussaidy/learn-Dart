@@ -1,11 +1,14 @@
-import 'user.dart';
+import 'package:myapp/db_client.dart';
+import 'package:myapp/myapp.dart' as myapp;
+import 'package:myapp/user.dart';
 
 void main() {
-  var user1 = User("nyanda", 23);
-  var user2 = User("nyanda", 23);
+    var a = DatabaseClient.instance;
+    print(a.dobGetter);
+  Future.delayed(Duration(seconds: 5), () {
+    var b = DatabaseClient.instance;
+    print(b.dobGetter);
+  });
 
-  print(user1);
-  print(user2);
-
- print( user1 == user2);
+  // print(dob.dobGetter);
 }
